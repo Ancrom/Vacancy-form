@@ -1,0 +1,8 @@
+@use "./variables" as *;
+
+.error {
+	margin-top: 4px;
+	color: $danger-color;
+	font-size: 12px;
+	font-weight: 400;
+}

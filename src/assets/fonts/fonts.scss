@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "PFDinTextCondPro-Regular";
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local("PFDinTextCondPro-Regular"),
+		url("/src/assets/fonts/PFDinTextCondPro-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PFDinTextCondPro-Bold";
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local("PFDinTextCondPro-Bold"),
+		url("/src/assets/fonts/PFDinTextCondPro-Bold.woff") format("woff");
+}

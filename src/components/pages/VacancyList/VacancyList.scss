@@ -1,0 +1,76 @@
+@use "../../../assets/styles/variables" as *;
+
+.job {
+	font-size: 14px;
+	line-height: 120%;
+	font-weight: 400;
+	&__item {
+		background-color: $default-secondary-color;
+		padding: 16px 26px;
+		border-radius: 16px;
+		position: relative;
+		& + & {
+			margin: 20px 0 0 0;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+	&__date {
+		color: $text-color;
+		opacity: 0.6;
+		margin: 0 0 31.5px 0;
+	}
+	&__title {
+		margin: 0 0 12px 0;
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 120%;
+		color: $text-color;
+	}
+	&__address {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		opacity: 0.8;
+		svg {
+			display: inline;
+			margin: 0 5px 0 0;
+		}
+	}
+	&__info {
+		font-size: 14px;
+		line-height: 120%;
+	}
+	&__salary {
+		margin: 0 20px 0 0;
+		span {
+			font-weight: 700;
+			font-size: 20px;
+			font-family: $font-secondary-bold;
+			color: $default-primary-color;
+		}
+	}
+	&__expirience {
+		margin: 0 20px 0 0;
+		span {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 100%;
+			color: $default-primary-color;
+			font-family: $font-secondary-bold;
+		}
+	}
+	&__metro {
+		svg {
+			display: inline;
+		}
+	}
+	&__edit {
+		position: absolute;
+		top: 16px;
+		right: 28px;
+	}
+}

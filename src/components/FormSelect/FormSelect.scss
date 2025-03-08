@@ -1,0 +1,22 @@
+@use "../../assets/styles/variables" as *;
+
+.formSelect {
+	display: flex;
+	flex-direction: column;
+	&__select {
+		appearance: none;
+		background-image: url(../../assets/img/arrow-down.png);
+		background-repeat: no-repeat;
+		background-position: calc(100% - 20px) center;
+		background-size: 16.5px 8px;
+		&:invalid {
+			color: $text-color;
+		}
+		option[disabled] {
+			color: #dcdcdc;
+		}
+	}
+	@media (width < 1024px) {
+		
+	}
+}

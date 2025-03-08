@@ -1,0 +1,27 @@
+.formInput {
+	display: flex;
+	flex-direction: column;
+	&--row {
+		flex-direction: row;
+		align-items: center;
+		.label {
+			margin: 0 7px 0 0;
+			font-weight: 300;
+			font-size: 16px;
+		}
+		.formInput__input {
+			min-width: unset;
+			width: 100px;
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+	}
+	@media (width < 1024px)  {
+		& + & {
+			margin: 32px 0 0 0;
+		}
+	}
+}

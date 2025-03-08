@@ -1,0 +1,59 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/label";
+@use "../../../assets/styles/input";
+@use "../../../assets/styles/error";
+@use "../../../assets/styles/btn";
+
+.form {
+	padding: 0 0 106px 0;
+	&__container {
+		background-color: $default-secondary-color;
+		padding: 60px;
+		margin-bottom: 32px;
+	}
+	&__inner {
+		display: flex;
+		& + & {
+			margin-top: 40px;
+		}
+		> * + * {
+			margin: 0 0 0 40px;
+		}
+		&--gap {
+			> * + * {
+				margin: 0 0 0 60px;
+			}
+		}
+	}
+	@media (width < 1024px) {
+		&__inner {
+			flex-direction: column;
+		}
+		&__inner {
+			> * + * {
+				margin: 32px 0 0 0;
+			}
+			&--gap {
+				> * + * {
+					margin: 32px 0 0 0;
+				}
+			}
+		}
+		&__buttons {
+			display: flex;
+			justify-content: center;
+			@media (width < 540px) {
+				flex-direction: column;
+				.btn + .btn {
+					margin: 20px 0 0 0;
+				}
+			}
+		}
+	}
+	@media (width < 512px) {
+		&__container {
+			margin: 0 -10px;
+			padding: 40px 15px;
+		}
+	}
+}

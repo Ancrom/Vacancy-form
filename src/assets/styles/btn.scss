@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+.btn {
+	font-weight: 800;
+	font-size: 15px;
+	color: #fff;
+	background-color: $default-primary-color;
+	padding: 16px 83.5px;
+	border: 1px solid $default-primary-color;
+	border-radius: 26px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	& + & {
+		margin: 0 0 0 20px;
+	}
+	&:hover {
+		background-color: $hover-primary-color;
+	}
+	&--reverse {
+		background-color: $default-secondary-color;
+		color: $default-primary-color;
+		&:hover {
+			border: 1px solid $hover-primary-color;
+			color: $hover-primary-color;
+			background-color: $default-secondary-color;
+		}
+	}
+}
