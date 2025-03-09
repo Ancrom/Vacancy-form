@@ -20,7 +20,7 @@ React-приложение для отображения списка вакан
 
 git clone https://github.com/Ancrom/Vacancy-form.git
 
-cd Seminars
+cd '.\Vacancy form\'
 
 ### 2. Установка зависимостей
 
