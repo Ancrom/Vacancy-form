@@ -12,6 +12,7 @@
     "start:all": "concurrently \"npm run dev\" \"npm run json-server\""
   },
   "dependencies": {
+    "firebase": "^11.4.0",
     "formik": "^2.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

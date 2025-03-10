@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { getData, postData, updateData } from "../../../services/ApiService";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import FormInput from "../../FormInput/FormInput";
 import FormRadio from "../../FormRadio/FormRadio";
@@ -39,6 +39,7 @@ const VacancyForm = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
+  const navigate = useNavigate();
   const isNew = !id;
 
   useEffect(() => {
@@ -93,7 +94,14 @@ const VacancyForm = () => {
         workSchedule: yup.string().required("Укажите график работы"),
         employmentType: yup.string().required("Выберите тип занятости"),
       })}
-      onSubmit={(values) => (isNew ? postData(values) : updateData(id, values))}
+      onSubmit={(values) => {
+        if (isNew) {
+          postData(values);
+          navigate("/");
+        } else {
+          updateData(id, values);
+        }
+      }}
     >
       <div className="container">
         <Form className="form">

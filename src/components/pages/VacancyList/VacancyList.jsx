@@ -11,8 +11,10 @@ const VacancyList = () => {
 
   useEffect(() => {
     setLoading(true);
-    getData()
-      .then((data) => setData(data))
+    getData() // Запрашиваем все вакансии из Firebase
+      .then((data) => {
+        setData(data);
+      })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
